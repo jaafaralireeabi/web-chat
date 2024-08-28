@@ -1,10 +1,9 @@
 const { Pool } = require('pg');
 require('dotenv').config();
 
-const pool = new Pool({
+export const pool = new Pool({
   connectionString: "postgres://default:FgyNupSQx16H@ep-ancient-bar-a19ejon6-pooler.ap-southeast-1.aws.neon.tech:5432/verceldb?sslmode=require?sslmode=require",
 });
-export { pool };
 
 export default async function DbConnect() {
     try {
