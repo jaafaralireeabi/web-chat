@@ -4,7 +4,7 @@ import EmailInput from "../components/emailInput";
 import PasswordInput from "../components/passwordInput";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
-import { pool } from "../../scripts/seed";
+import { pool } from '../../scripts/seed';
 import DbConnect from "../../scripts/seed";
 import { redirect } from "next/dist/server/api-utils";
 
