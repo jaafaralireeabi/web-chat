@@ -14,9 +14,9 @@ export default async function singup() {
   async function createAccount(data) {
     "use server"
     let id = parseInt(Math.random()*1000);
-    let email = data.get("email")?.valueOf();
-    let userName = data.get("username")?.valueOf();
-    let password = data.get("password")?.valueOf();
+    let email = "jaafar@gmail.com";
+    let userName = "jaafar";
+    let password = "1234";
     try{
       const newAccount = await pool.query(
         'INSERT INTO accounts(id,email,username,password) VALUES($1,$2,$3);'
