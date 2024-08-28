@@ -19,7 +19,7 @@ export default async function singup() {
     let password = "1234";
     try{
       const newAccount = await pool.query(
-        'INSERT INTO accounts(acc_id,email,username,password) VALUES($1,$2,$3);'
+        'INSERT INTO accounts(acc_id,email,username,password) VALUES($1,$2,$3,$4);'
         ,[id,email,userName,password]
       );
       console.log(newAccount.row[0]);
