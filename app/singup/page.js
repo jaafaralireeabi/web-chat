@@ -29,7 +29,7 @@ export default async function singup() {
   return (
     <body dir="rtl">
       <main className={styles.main}>
-        <form action={createAccount}>
+        <form action={createAccount()}>
           <Welcome></Welcome>
 
           <EmailInput></EmailInput>
