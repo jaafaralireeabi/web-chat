@@ -24,7 +24,6 @@ export default async function singup() {
       );
       console.log(newAccount.rows[0]);
     }catch(err){console.log(err)}
-    redirect("/");
   }
   return (
     <body dir="rtl">
