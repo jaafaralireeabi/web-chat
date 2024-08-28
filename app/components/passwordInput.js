@@ -1,13 +1,10 @@
 "use client";
-import { Html } from "next/document";
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-    faEnvelope,
     faLock,
     faEye,
     faEyeSlash,
-    faQrcode,
   } from "@fortawesome/free-solid-svg-icons";
 
 export default function PasswordInput({placeholder="كلمة المرور"}) {
@@ -16,7 +13,7 @@ export default function PasswordInput({placeholder="كلمة المرور"}) {
   return (
     <div className="password">
       <FontAwesomeIcon icon={faLock} />
-      <input
+      <input name="password"
         type={visible ? "text" : "password"}
         placeholder={placeholder}
         onChange={(e) => setPassword(e.target.value)}

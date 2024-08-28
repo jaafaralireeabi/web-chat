@@ -8,7 +8,7 @@ export default function EmailInput() {
   return (
     <div className="email">
       <FontAwesomeIcon icon={faEnvelope} />
-      <input type="email" placeholder="عنوان البريد الالكتروني" required></input>
+      <input name="email" type="email" placeholder="عنوان البريد الالكتروني" required></input>
       <span className="">
         <FontAwesomeIcon icon={faQrcode} />
       </span>

@@ -4,8 +4,8 @@ import PasswordInput from "./components/passwordInput.js";
 import Welcome from "./components/welcome.js";
 import EmailInput from "./components/emailInput.js";
 
-
 export default function Home() {
+  
   return (
       <body dir="rtl">
         <main className={styles.main}>
