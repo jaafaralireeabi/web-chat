@@ -22,7 +22,7 @@ export default async function singup() {
         'INSERT INTO accounts(acc_id,email,username,password) VALUES($1,$2,$3,$4);'
         ,[id,email,userName,password]
       );
-      console.log(newAccount.row[0]);
+      console.log(newAccount.rows[0]);
     }catch(err){console.log(err)}
     redirect("/");
   }
