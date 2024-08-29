@@ -6,14 +6,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { pool } from "../../scripts/seed";
 import DbConnect from "../../scripts/seed";
-import { redirect } from "next/dist/server/api-utils";
+import { NextApiRequest, NextApiResponse } from 'next';
+import { redirect } from "next/navigation";
 
 export default async function singup() {
   DbConnect();
   //insert to ACCOUNTES TABLE
   async function createAccount(data) {
-    if (req.method == "POST") {
-      ("use server");
+    "use server";
+    console.log("create account")
       let id = parseInt(Math.random() * 1000);
       let email = data.get("email")?.valueOf();
       let userName = data.get("username")?.valueOf();
@@ -28,14 +29,12 @@ export default async function singup() {
         console.log(err);
       }
       redirect("/chat");
-    }
   }
   return (
     <body dir="rtl">
       <main className={styles.main}>
-        <form method="POST" action={createAccount}>
+        <form method="GET" action={createAccount}>
           <Welcome></Welcome>
-
           <EmailInput></EmailInput>
           <div className="userName">
             <FontAwesomeIcon icon={faUser} />
