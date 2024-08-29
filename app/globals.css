@@ -213,6 +213,7 @@ form input:focus {
   justify-content: center;
   align-items: center;
   gap: 5px;
+  margin-top: 5px;
 }
 
 .register a {
