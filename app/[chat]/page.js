@@ -6,7 +6,7 @@ import DarkMode from "../components/darkMode";
 import DbConnect from "../../scripts/seed";
 import { pool } from "../../scripts/seed";
 
-export default async function Chat({ params,imgUrl="images/profile1.jpg"}) {
+export default function Chat({ params,imgUrl="images/profile1.jpg"}) {
     return(
         <html suppressHydrationWarning>
             <body dir="rtl">
