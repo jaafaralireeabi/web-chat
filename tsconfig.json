@@ -20,13 +20,18 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "strictNullChecks": true
   },
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "app/page.js",
+    "app/pages/api/login.js",
+    "app/api/auth/login.js",
+    "app/pages/api/create-session.js"
   ],
   "exclude": [
     "node_modules"
