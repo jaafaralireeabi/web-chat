@@ -1,0 +1,109 @@
+:root {
+    --mainDark: #282727;
+    --secDark: #171c1f; 
+    --mainLight: #fff;
+    --secLight: #eff5f5;
+}
+body {
+  background-color: var(--mainDark);
+  transition: background-color 0.5s, color 0.5s;
+  -webkit-transition: background-color 0.5s, color 0.5s;
+  -moz-transition: background-color 0.5s, color 0.5s;
+  -ms-transition: background-color 0.5s, color 0.5s;
+  -o-transition: background-color 0.5s, color 0.5s;
+}
+.light{
+  background-color: var(--mainLight);
+}
+
+nav {
+  position: relative;
+  background-color: var(--secDark);
+  width: 25%;
+  height: 100vh;
+  box-shadow: rgb(255 255 255 / 10%) 0px 0px 10px;
+  border-left: 1px #47505e solid;
+}
+
+nav .profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.light nav {
+  background-color: var(--mainLight);
+}
+nav .profile .uList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+nav .profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.darkMode, .logOut {
+  background-color: var(--mainDark);
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.light .darkMode, .light .logOut {
+  background-color: var(--secLight);
+}
+svg {
+  width: 15px;
+  color: var(--mainLight);
+  cursor: pointer;
+}
+.light svg {
+  color: var(--mainDark);
+}
+nav .chats {
+  position: relative;
+  padding: 10px;
+  height: 100%;
+  border-top: 1px var(--mainLight) solid;
+}
+.light nav .chats {
+  background-color: var(--secLight);
+  border-top-color:#47505e;
+}
+
+nav .chats .newChat {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  background-color: var(--mainDark);
+  color: var(--mainLight);
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-border-radius:;
+  -moz-border-radius:;
+  -ms-border-radius:;
+  -o-border-radius:;
+}
+
+.light nav .chats .newChat {
+  background-color: #f7fff3;
+  color: var(--secDark);
+}
