@@ -3,9 +3,12 @@ import { useState,useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./chat.css"
 import { faRightFromBracket, faPlus, faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
+import Modal from "../components/modal";
+import ProfileImg from "../components/profileImg";
 
 
-export default function Chat({imgUrl="images/profile.png"}) {
+
+export default function Chat() {
     const [theme, setTheme] = useState('dark');
     useEffect(() => {
       if (theme === 'dark') {
@@ -21,10 +24,11 @@ export default function Chat({imgUrl="images/profile.png"}) {
     return(
         <html suppressHydrationWarning>
         <body dir="rtl" >
+            <Modal></Modal>
             {/* <Modal></Modal> */}
             <nav>
                 <div className="profile">
-                    <img src={imgUrl} alt="no image"></img>
+                    <ProfileImg/>
                     <div className="uList">
                         <div className="darkMode" onClick={toggleTheme}>
                             {theme==='dark'? 
